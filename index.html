@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <!-- Bootstrap style -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- Font Awesome style -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- GOOGLE FONTS -->
+
+    <!-- My Style css -->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+<body>
+
+  <div class="container py-4 text-white">
+    <label class="mb-2" for="productName">Product Name:</label>
+    <input oninput="validateName()" class="form-control mb-1" type="text" id="productName">
+    <p id="invalidName" class="text-danger mb-4 d-none">Please Start With Capitalize Character</p>
+
+    <label class="mb-2" for="productPrice">Product Price:</label>
+    <input class="form-control mb-4" type="text" id="productPrice">
+
+    <label class="mb-2" for="productCategory">Product Category:</label>
+    <input class="form-control mb-4" type="text" id="productCategory">
+
+    <label class="mb-2" for="productDesc">Product Description:</label>
+    <textarea class="form-control mb-4" type="text" id="productDesc"></textarea>
+
+    <button id="addBtn" onclick="createProduct()" class="btn btn-info mb-4 d-block">Creat Product</button>
+    <button id="updateBtn" onclick="updateProduct()" class="btn btn-warning mb-4 d-none">Update Product</button>
+
+    <input class="form-control mb-3 w-75 mx-auto" placeholder="Search ...." type="search" oninput="searchProducts(this.value)">
+
+
+  <table class="table text-center mt-4">
+    <thead>
+      <th>Num</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th>Description</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </thead>
+    <tbody id="tbody">
+      
+    </tbody>
+  </table>
+</div>
+
+
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
